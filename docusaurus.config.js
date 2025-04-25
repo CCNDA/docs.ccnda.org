@@ -36,11 +36,6 @@ const config = {
     locales: ['zh-Hant'],
   },
 
-  gtag: {
-    trackingID: 'G-D2ZDPY0HD5',
-    anonymizeIP: true,
-  },
-
   presets: [
     [
       'classic',
@@ -59,6 +54,10 @@ const config = {
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
+        },
+        gtag: {
+          trackingID: 'G-D2ZDPY0HD5',
+          anonymizeIP: true,
         },
         theme: {
           customCss: './src/css/custom.css',
