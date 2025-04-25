@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: ccnda/docs.ccnda.org
+  branch: main
+
+# 設定界面語言為繁體中文
+locale: 'zh_Hant'
+
+local_backend: true
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+site_url: https://docs.ccnda.org
+display_url: https://docs.ccnda.org
+
+# 新增全域編輯器提示訊息
+editor:
+  preview: true
+  message: "發布後，佈署約需 2分鐘，請靜待更新"
+
+collections:
+  - name: docs
+    label: "API 文件"
+    folder: docs
+    create: true
+    slug: "{{slug}}"
+    preview_path: "docs/{{slug}}"
+    fields:
+      - { label: "標題", name: "title", widget: "string" }
+      - { 
+          label: "選單排序 (數字小的排前面，留空會排在最後)",
+          name: "sidebar_position",
+          widget: "number",
+          value_type: "int",
+          min: 1,
+          default: 10, 
+          required: false
+        }
+      - {
+          label: "標籤",
+          name: "tags",
+          widget: "list",
+          required: false,
+          hint: "可輸入多個標籤，按 Enter 分隔"
+        }
+      - { label: "SEO 描述", name: "description", widget: "text", required: false }
+      - { label: "內文", name: "body", widget: "markdown" }
+    sortable_fields: ["title", "sidebar_position"]
