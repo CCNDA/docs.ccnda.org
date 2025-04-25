@@ -36,6 +36,11 @@ const config = {
     locales: ['zh-Hant'],
   },
 
+  gtag: {
+    trackingID: 'G-D2ZDPY0HD5',
+    anonymizeIP: true,
+  },
+
   presets: [
     [
       'classic',
