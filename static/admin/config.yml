@@ -1,23 +1,25 @@
+site_url: https://docs.ccnda.org
+display_url: https://docs.ccnda.org
+
+# 繁中
+locale: zh_Hant
+
+# 登入介面 logo
+logo_url: /img/logo2.png
+
 backend:
   name: github
   repo: ccnda/docs.ccnda.org
   branch: main
-
-# 設定界面語言為繁體中文
-locale: 'zh_Hant'
 
 local_backend: true
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
-site_url: https://docs.ccnda.org
-display_url: https://docs.ccnda.org
-
 # 新增全域編輯器提示訊息
 editor:
   preview: true
-  message: "發布後，佈署約需 2分鐘，請靜待更新"
 
 collections:
   - name: docs
