@@ -49,6 +49,8 @@ const config = {
           // 顯示最後更新作者
           showLastUpdateAuthor: true,
         },
+        // 沒有部落格（repo 沒有 blog/）。Docusaurus 3.10 起，沒文章也會產一頁空的 /blog，明確關掉（2026-10-28）
+        blog: false,
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
